@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void){				//if문과 반복문을 활용한 문제
+    int hour,minute,plus_minute;		//필요한 변수는 시간,분,추가 시간이다
+    scanf("%d %d",&hour,&minute);
+    scanf("%d",&plus_minute);
+    minute+=plus_minute;			//추가된 시간을 분에 합쳐준다.
+    
+    if (minute>=60)				//분이 60보다 크다면 ->1시간 으로 표현 가능하다
+        while(minute>=60){
+            minute-=60;			//추가 시간은 1000분까지임으로 (분+추가)가 60보다 작을때까지 빼준다 
+            hour+=1;				//60분이 줄어들때마다 시간을 1씩 추가한다.
+        }
+    if (hour>=24)				//24시간이 넘어가면 24를빼서 표현한다.
+        hour-=24;
+    printf("%d %d",hour,minute);
+    return 0;
+}

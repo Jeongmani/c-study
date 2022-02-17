@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void){				//조건문을 활용해서 푸는 기본문제
+    int A,B,C;
+    scanf("%d %d %d",&A,&B,&C);		//A,B,C 세개를 입력받는다.
+    int result=0;
+    if (A==B && B==C && A==C)		//규칙에 맞게 연산을 진행한다.  &&=and		
+        result=10000+A*1000;
+    else{
+        if(A==B || A==C)			// ||=or
+            result=1000+A*100;
+        else if (B==C)
+            result=1000+B*100;
+        else{
+            if (A>B && A>C)
+                result=100*A;
+            else if (B>A && B>C)
+                result=100*B;
+            else   
+                result=100*C;
+        }
+    }    
+    printf("%d",result);  
+}

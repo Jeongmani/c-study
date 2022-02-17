@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void){		//if문을 활용한 조건 문제
+    int A,B;
+    scanf("%d",&A);		//A,B를 입력받아 사분면을 결정
+    scanf("%d",&B);
+    if (A>0 && B>0)
+        printf("1");
+    if (A<0 && B>0)
+        printf("2");
+    if (A<0 && B<0)
+        printf("3");
+    if (A>0 && B<0)
+        printf("4");
+
+    return 0;
+}

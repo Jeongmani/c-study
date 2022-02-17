@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void){			// for문을 활용한 더하기 문제
+    int time,A,B;			//계산하고 싶은 횟수, 더할 숫자 A,B를 선언한다.
+    scanf("%d",&time);		//횟수를 입력받고
+    for(int i=0;i<time;i++){		//for 문을 이용해서 반복한다.
+        scanf("%d %d",&A,&B);	//A,B를 입력받고
+        printf("%d\n",A+B);		//A+B를 출력한다.
+    }
+    return 0;
+}
