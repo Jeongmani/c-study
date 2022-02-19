@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void){			//for문을 활요한 기본문제
+    int N,X;
+    scanf("%d %d",&N,&X);
+    int input;
+    for(int i=0; i<N; i++){
+        scanf("%d",&input);
+        if(X>input)
+            printf("%d ",input);
+    }
+}
